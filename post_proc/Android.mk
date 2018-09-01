@@ -33,6 +33,7 @@ ifeq ($(strip $(AUDIO_FEATURE_ENABLED_AUDIOSPHERE)),true)
 endif
 
 LOCAL_CFLAGS += $(qcom_post_proc_common_cflags)
+LOCAL_CFLAGS += -Wno-sign-compare -Wno-unused-variable -Wno-unused-label -Wno-format
 
 ifeq ($(strip $(AUDIO_FEATURE_ENABLED_DTS_EAGLE)), true)
     LOCAL_CFLAGS += -DDTS_EAGLE
@@ -78,6 +79,7 @@ LOCAL_SHARED_LIBRARIES := \
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_CFLAGS += $(qcom_post_proc_common_cflags)
+LOCAL_CFLAGS += -Wno-sign-compare -Wno-unused-variable -Wno-unused-label -Wno-format
 
 ifeq ($(strip $(AUDIO_FEATURE_ENABLED_DTS_EAGLE)), true)
 LOCAL_CFLAGS += -DHW_ACC_HPX
